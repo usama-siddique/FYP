@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imageback"
+    android:alpha="7"
+    tools:context=".MainActivity">
+
+    <ViewSwitcher
+        android:id="@+id/view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_marginTop="11dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="201dp"
+                android:src="@drawable/camera"
+                android:layout_height="201dp" />
+            <RelativeLayout
+                android:id="@+id/r"
+                android:layout_marginTop="11dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/select"
+                    android:text="Select Image"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_bd"
+                    android:layout_width="150dp"
+                    android:onClick="openGallery"
+                    android:textColor="#ffffff"
+                    android:layout_height="40dp" />
+
+                <Button
+                    android:id="@+id/capture"
+                    android:onClick="openCamera"
+                    android:text="Capture Image"
+                    android:layout_below="@+id/select"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_bd"
+                    android:layout_width="150dp"
+                    android:textColor="#ffffff"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/send"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/r"
+                android:text="Send"
+                android:textColor="#ffffff"
+                android:background="@drawable/shape_bd"
+                android:layout_width="150dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_marginTop="23dp"
+                android:text=""
+                android:textSize="21dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@+id/r"
+                android:layout_below="@+id/r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <Button
+                android:id="@+id/show_images"
+                android:layout_below="@+id/send"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Show Received Images"
+                android:background="@drawable/shape_bd"
+                android:textColor="#ffffff"
+                android:layout_width="150dp"
+
+                android:layout_height="40dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/a"
+                    android:layout_below="@+id/show_images"
+                    android:layout_width="wrap_content"
+                    android:editable="false"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/images_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/images_list"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+            <Button
+
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="11dp"
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </ViewSwitcher>
+
+
+</RelativeLayout>
